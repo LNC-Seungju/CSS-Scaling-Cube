@@ -1,0 +1,246 @@
+@keyframes spin {
+  from {
+      transform: translate(-50%, -50%) rotateY(0) rotateX(0);
+  }
+  to {
+      transform: translate(-50%, -50%) rotateY(360deg) rotateX(360deg);
+  }
+}
+@keyframes spin1 {
+  0% {
+      top: 100px;
+      left: 100px;
+      width: 100px;
+      height: 100px;
+  }
+  50% {
+      top: 125px;
+      left: 125px;
+      width: 50px;
+      height: 50px;
+  }
+  100% {
+      top: 100px;
+      left: 100px;
+      width: 100px;
+      height: 100px;
+  }
+}
+@keyframes x {
+  0% {
+      transform: translateX(50px)  rotateY(90deg);
+  }
+  50% {
+      transform: translateX(25px)  rotateY(90deg);
+      width: 50px;
+      height: 50px;
+      top: 125px;
+      left: 125px;
+  }
+  100% {
+      transform: translateX(50px)  rotateY(90deg);
+  }
+}
+@keyframes y {
+  0% {
+      transform: translateY(50px)  rotateX(90deg);
+  }
+  50% {
+      transform: translateY(25px)  rotateX(90deg);
+      width: 50px;
+      height: 50px;
+      top: 125px;
+      left: 125px;
+  }
+  100% {
+      transform: translateY(50px)  rotateX(90deg);
+  }
+}
+@keyframes z { 
+  0% {
+      transform: translateZ(50px);
+  }
+  50% {
+      transform: translateZ(25px);
+      width: 50px;
+      height: 50px;
+      top: 125px;
+      left: 125px;
+  }
+  100% {
+      transform: translateZ(50px);
+  }
+}
+@keyframes x1 {
+  0% {
+      transform: translateX(-50px) rotateY(90deg);
+  }
+  50% {
+      transform: translateX(-25px) rotateY(90deg);
+      width: 50px;
+      height: 50px;
+      top: 125px;
+      left: 125px;
+  }
+  100% {
+      transform: translateX(-50px) rotateY(90deg);
+  }
+}
+@keyframes y1 {
+  0% {
+      transform: translateY(-50px) rotateX(-90deg);
+  }
+  50% {
+      transform: translateY(-25px) rotateX(-90deg);
+      width: 50px;
+      height: 50px;
+      top: 125px;
+      left: 125px;
+  }
+  100% {
+      transform: translateY(-50px) rotateX(-90deg);
+  }
+}
+@keyframes z1 { 
+  0% {
+      transform: translateZ(-25px) ;
+  }
+  50% {
+      transform: translateZ(0px) ;
+      width: 50px;
+      height: 50px;
+      top: 125px;
+      left: 125px;
+  }
+  100% {
+      transform: translateZ(-50px) ;
+  }
+}
+.sqaure-wrapper1,
+.sqaure-wrapper2,
+.sqaure-wrapper3,
+.square-wrapper4,
+.square-wrapper5 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  perspective: 400;
+  animation: linear spin 3s infinite;
+}
+.sqaure-wrapper1 {
+  top: 50%;
+  left: 50%;
+}
+.sqaure-wrapper2 {
+  top: 30%;
+  left: 50%;
+}
+.sqaure-wrapper3 {
+  top: 70%;
+  left: 50%;
+}
+.square-wrapper4 {
+  top: 50%;
+  left: 30%;
+}
+.square-wrapper5 {
+  top: 50%;
+  left: 70%;
+}
+.sqaure1,
+.sqaure2,
+.sqaure3,
+.sqaure4,
+.sqaure5 {
+  position: absolute;
+}
+.sqaure1 {
+  top: 100px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  animation: linear spin1 3s infinite;
+}
+.sqaure2,
+.sqaure3,
+.sqaure4,
+.sqaure5 {
+  top: 125px;
+  left: 125px;
+  width: 50px;
+  height: 50px;
+}
+.face1-front {
+  transform: translateZ(50px);
+  background-color: red;
+}
+.face1-back {
+  transform: translateZ(-50px);
+  background-color: orange;
+}
+.face1-top {
+  transform: translateY(50px) rotateX(90deg);
+  background-color: yellow;
+}
+.face1-bottom {
+  transform: translateY(-50px) rotateX(-90deg);
+  background-color: green;
+}
+.face1-left {
+  transform: translateX(-50px) rotateY(90deg);
+  background-color: skyblue;
+}
+.face1-right {
+  transform: translateX(50px) rotateY(90deg);
+  background-color: blue;
+}
+.face2-front {
+  transform: translateZ(25px);
+  background-color: red;
+}
+.face2-back {
+  transform: translateZ(-25px);
+  background-color: orange;
+}
+.face2-top {
+  transform: translateY(25px) rotateX(90deg);
+  background-color: yellow;
+}
+.face2-bottom {
+  transform: translateY(-25px) rotateX(-90deg);
+  background-color: green;
+}
+.face2-left {
+  transform: translateX(-25px) rotateY(90deg);
+  background-color: skyblue;
+}
+.face2-right {
+  transform: translateX(25px) rotateY(90deg);
+  background-color: blue;
+}
+.face1-front {
+  background-color: red;
+  animation: linear z 3s infinite;
+}
+.face1-back {
+  background-color: orange;
+  animation: linear z1 3s infinite;
+}
+.face1-top {
+  background-color: yellow;
+  animation: linear y 3s infinite;
+}
+.face1-bottom {
+  background-color: green;
+  animation: linear y1 3s infinite;
+}
+.face1-left {
+  background-color: skyblue;
+  animation: linear x 3s infinite;
+}
+.face1-right {
+  background-color: blue;
+  animation: linear x1 3s infinite;
+}
